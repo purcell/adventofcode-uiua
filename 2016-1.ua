@@ -9,9 +9,7 @@ ToVecOffset ← ⊡⊙1_¯1⊗@R
 
 Vectors ← ∵(⊡∶v) \(◿⧻v+) ∵(ToVecOffset⊡0⊔)
 
-ParseInt ← /+ × ⊃(ⁿ∶10⇡⧻)(-@0)⇌
-
-Distances ← ∵(ParseInt ↘1⊔)
+Distances ← ∵(parse ↘1⊔)
 
 Moves ← × ⊃Distances Vectors Directions
 
