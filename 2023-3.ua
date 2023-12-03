@@ -12,13 +12,28 @@ $ .664.598..
 Digits ← "1234567890"
 DigitMap ← ≡≡(∊⊡1_1:Digits)
 NearSymbol ← ≡≡(/+♭¬∊:⊂"."Digits)
+NearStar ← ≡≡(/+♭=@*)
 NeighbourBlocks ← ◫3_3↻¯1_¯1⬚@.+↯:¤0+2△.
 
 ⊜∘≠,@\n
-.
+
+..
+# Part 1
 NeighbourBlocks
 ⊃NearSymbol DigitMap
-×+,                  # 1s are digits, >1 if a digit near a symbol
-⊙(⊐/⊂≡(□⊜parse>0)).  # Part numbers
-/⊐⊂≡(□⊜(>⊃⧻(/+))≠0). # Which numbers are near symbols
+×+,
+⊙(⊐/⊂≡(□⊜parse>0)).
+/⊐⊂≡(□⊜(>⊃⧻(/+))≠0).
 /+×
+
+:
+# Part 2
+×⍜♭(⇡⧻).=@*..
+≡≡(/↥ ♭) ◫3_3↻¯1_¯1⬚0+↯:¤0+2△.
+⊙(∊:"1234567890")
+×+,
+/⊐⊂⊐≡⊜parse >0,:
+⊙(/⊐⊂⊐≡⊜(/↥) >0.)
+⊙(⊏⊚).>1.:
+⊙(⊏⊚):
+/+⊕(×⊃(=2⧻)(/×))
