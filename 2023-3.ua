@@ -9,13 +9,16 @@ $ ......755.
 $ ...$.*....
 $ .664.598..
 
+Digits ← "1234567890"
+DigitMap ← ≡≡(∊⊡1_1:Digits)
+NearSymbol ← ≡≡(/+♭¬∊:⊂"."Digits)
+NeighbourBlocks ← ◫3_3↻¯1_¯1⬚@.+↯:¤0+2△.
+
 ⊜∘≠,@\n
-¬∊,".1234567890"     # 1/0 map of symbol positions
-↻¯1_¯1⬚0+↯:¤0+2△.    # Pad around edges with zeroes
-≡≡(>0/+♭)◫3_3        # Countable positions
-⊙(..∊:"1234567890".) # Digit positions
-×+
-⊙(⊐/⊂≡(□⊜parse))     # Part numbers
-/⊐⊂≡(□⊜(>⊃⧻(/+))≠0). # Digit positions
-×
-/+
+.
+NeighbourBlocks
+⊃NearSymbol DigitMap
+×+,                  # 1s are digits, >1 if a digit near a symbol
+⊙(⊐/⊂≡(□⊜parse>0)).  # Part numbers
+/⊐⊂≡(□⊜(>⊃⧻(/+))≠0). # Which numbers are near symbols
+/+×
