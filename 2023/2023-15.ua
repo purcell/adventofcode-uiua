@@ -12,10 +12,8 @@ H ← ∧(◿256×17+-@\0):0°□
 Lab ← ⍜°□(▽×⊃(≥@a|≤@z).)
 Op ← ⊢▽∊,"-="°□
 Foc ← ⋕▽×⊃(≥@0|≤@9).°□
-FindLab ← ≡(=∩Lab)
-Rm ← ▽¬FindLab ⊙.
-Swp ← ⊂⊂⊙:⊃↙↘↧⊃(⊗1FindLab|⧻.Rm|∘)
-Acc ← ∧((Swp|Rm)=@-Op.) :[]
+PrePost ← ⊃(↙|↘+1)⊗1≡(=∩Lab)⊙.
+Acc ← ∧((⊂⊂:|⊂;)=@-Op.⊙PrePost.) :[]
 Score ← (0|×/+×⊃(+1⇡⧻|≡Foc|+1H Lab ⊢))>0⧻.
 
 ≡(H Lab.)
