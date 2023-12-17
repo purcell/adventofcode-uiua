@@ -10,6 +10,25 @@ $ #....###..
 $ #OO..#....
 
 ⊜∘≠@\n.
-Tilt ← ⍜⍉≡(⊜(⊂⊙(⊏⍖.)) "" +1∊,"O.")
+TiltW ← ≡(⊜(⊂⊙(⊏⍖.)) "" +1≠@#.)
+TiltE ← ⍜(≡⇌)TiltW
+TiltN ← ⍜(⍉)TiltW
+TiltS ← ⍜⇌TiltN
 
-/+≡(+1⊢)⊚="O"⇌ Tilt
+Weight ← /+≡(+1⊢)⊚="O"⇌
+
+.
+# Part1
+Weight TiltN
+:
+
+# Part 2
+Limit ← 150
+Cycle ← TiltE TiltS TiltW TiltN
+⍥(⊂⊃(∘|Cycle ⊡¯1)) Limit ¤
+
+# Find repeats
+⊃⊢(/-)↙2⊚=⊢⊢▽>1≡⧻.⊕□..⊛.
+FirstRepeat ←
+RepeatInterval ←
+Weight⊡⍜(-FirstRepeat)(◿RepeatInterval)1000000000
